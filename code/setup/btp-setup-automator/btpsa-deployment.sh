@@ -21,7 +21,7 @@ continue_prompt_bool() {
 read_automator_config() {  
   result=$(jq '.' /home/user/log/metadata_log.json)
   SUBDOMAIN=$(jq -r '."subdomain"' <<< "${result}")
-  CLUSTER_DOMAIN="c-82e8502"
+  CLUSTER_DOMAIN="c-0e1f2d3"
   KUBECONFIG_URL=$(jq -r '."kymaKubeConfigUrl"' <<< "${result}")
   DB_ADMIN="DBADMIN"
   DB_ADMIN_PASSWORD="$( echo "$result" | jq -r '.createdServiceInstances[] | select(.name == "hana-cloud") | .parameters.data.systempassword' 2> /dev/null)"
