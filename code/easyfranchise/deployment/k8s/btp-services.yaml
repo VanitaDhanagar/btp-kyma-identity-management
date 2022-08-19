@@ -68,8 +68,8 @@ spec:
     category: "Demo applications"
     appUrls:
       # url registered in the kyma-broker which handles SaaS provisioning (subscription/deletion of saas instances)
-      onSubscription: https://subscription.c-0e1f2d3.kyma.ondemand.com/callback/v1.0/tenants/{tenantId}
-      getDependencies: https://subscription.c-0e1f2d3.kyma.ondemand.com/callback/v1.0/dependencies
+      onSubscription: https://subscription.<cluster-domain>/callback/v1.0/tenants/{tenantId}
+      getDependencies: https://subscription.<cluster-domain>/callback/v1.0/dependencies
     appPlans:
       - name: default
         description: Easy Franchise default plan
